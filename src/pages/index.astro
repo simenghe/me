@@ -5,18 +5,35 @@ import Counter from "@components/Counter.astro";
 import counter from "@content/counter.json";
 import { homepage } from "@content/homepage";
 import Features from "@components/Features.astro";
+import { Icon } from "astro-icon";
 ---
 
 <Layout>
   <section class="grid py-10 place-items-center text-center">
     <h1 class="text-4xl mb-5">Simeng (Simon) He</h1>
-    <p class="">Computer science student at the University of Waterloo!</p>
+    <p class="">
+      Senior Computer science student at the University of Waterloo!
+    </p>
     <p class="">
       Previously interned <a href="https://noom.com">@noom</a> and <a
-        href="https://tesla.com">@tesla</a>.
+        href="https://tesla.com">@tesla</a
+      >.
+      <br />
+      Incoming Software Engineering Intern <a
+        target="_blank"
+        href="https://apple.com">@apple</a
+      >
     </p>
+    <div>
+      <a target="_blank" href="https://www.linkedin.com/in/simeng-he/">
+        <Icon
+          name="uil:linkedin"
+          class="overflow-hidden inline-flex sm:m-8 w-28 h-28"
+        />
+      </a>
+    </div>
   </section>
-  {
+  <!-- {
     homepage.map((homepage) => (
       <Features
         title={homepage.title}
@@ -24,8 +41,8 @@ import Features from "@components/Features.astro";
         content={homepage.content}
       />
     ))
-  }
-  <section
+  } -->
+  <!-- <section
     class="py-20 sm:flex sm:items-center sm:justify-evenly text-center sm:text-left"
   >
     {
@@ -37,6 +54,6 @@ import Features from "@components/Features.astro";
         </ul>
       )
     }
-  </section>
+  </section> -->
   <Footer />
 </Layout>
